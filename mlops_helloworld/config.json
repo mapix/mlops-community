@@ -1,0 +1,36 @@
+{
+    "_comment_1": "project config",
+    "workflow_host": "https://workflows.deepmodeling.com/",
+    "k8s_api_server": "https://workflows.deepmodeling.com",
+    "workflow_token": "TOKEN",
+    "bohrium": {
+        "username": "username",
+        "password": "password",
+        "project_id": -1
+    },
+    "image": "python:3.8",
+
+    "config_logger": {
+        "project": "MLOps_helloworld",
+        "experiment": "20230227-mlops-helloworld",
+        "aim_repo": "aim://tracking-api-demo.mlops.dp.tech:443",
+        "aim_personal_token": "TOKEN",
+        "feishu_groups": [
+        ]
+    },
+
+    "dataset_info": {
+        "type": "parameter",
+        "parameters": {
+            "molecules": [
+                "c1ccccc1CCN",
+                "CNC[C@@H](c1cc(c(cc1)O)O)O",
+                "c1cc(c(cc1CCN)O)O",
+                "CC[C@H](C)[C@H]1C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@@H](CSSC[C@@H](C(=O)N[C@H](C(=O)N1)CC2=CC=C(C=C2)O)N)C(=O)N3CCC[C@H]3C(=O)N[C@@H](CC(C)C)C(=O)NCC(=O)N)CC(=O)N)CCC(=O)N"
+            ]
+        },
+        "name": "this is a parameter dataset",
+        "namespace": "benchmark_helloworld",
+        "version": "0.1"
+    }
+}

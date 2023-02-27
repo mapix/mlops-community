@@ -1,0 +1,5 @@
+{
+    "submit_command": "benchmark_mlops_hlwd submit {}",
+    "status_command": "benchmark_mlops_hlwd status {} {}",
+    "download_command": "benchmark_mlops_hlwd download {} {} --prefix {}"
+}

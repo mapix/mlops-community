@@ -1,0 +1,20 @@
+{
+    "_comment_1": "project config",
+    "workflow_host": "https://workflow.test.dp.tech/",
+    "workflow_endpoint": "39.106.93.187:30900",
+    "k8s_api_server": "https://60.205.59.4:6443",
+    "workflow_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlhMRGZjbnNRemE4RGQyUXRMZG1MX3NXeG5TMzlQTnhnSHZkS1lGM25SODAifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJhcmdvIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImFyZ28tc2VydmVyLXRva2VuLXpyNnFqIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImFyZ28tc2VydmVyIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNThmYzM2YTItMWM1MC00N2VhLWE4ZDEtZmIxYzczOWY5ZjY5Iiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmFyZ286YXJnby1zZXJ2ZXIifQ.NGPqb4OAgyaGPDkyY1on7B-KQgnjioe-lmnm5PPEFMxfT6c__ND-Ux2deHXVXDwQM-CGVuncv-Vi_J-HqilASYBef-eik2o0fZgyLEtEYeo3eunVfxr4_X2sDErMvakSQvoIkAraZFXUM7-hfKzzt07pVSHjAFFtnhC8x8dv3CKJ-QGa11CqT5mcpMOj_5e_tTKxCsyMd6v4exn77k39rNrvXFXmI_HaFAMwqUlJlP3Gq7dzWO1YjjKj3CJE1y6nW6o7cR73Gjh8we7M-5sFSQcfF0Ck7kYWmJAB87E0Rh75LEkWH8L4_e3kuS5FbZDx9YvbontEH8dTVTp7PAb0wg",
+    "bohrium": {
+        "username": "username",
+        "password": "password",
+        "project_id": -1
+    },
+    "image": "python:3.8",
+
+    "dataset_info": {
+        "name": "this is a dataset",
+        "namespace": "benchmark_helloworld",
+        "version": "0.1",
+        "data_type": "local"
+    }
+}
