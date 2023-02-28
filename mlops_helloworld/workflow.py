@@ -93,11 +93,11 @@ def singleSystemProtocol(config_logger: Dict):
     single.inputs.parameters = {"smiles": InputParameter()}
 
     sampling = Step("sampling",
-                    PythonOPTemplate(Sampling, image="daverona/rdkit"),
+                    PythonOPTemplate(Sampling, image="daverona/rdkit", image_pull_policy="IfNotPresent"),
                     parameters={"smiles": single.inputs.parameters["smiles"]})
     single.add(sampling)
     metric_log = Step("metric-report",
-                      PythonOPTemplate(MetricReport, image="gturtu21/ubuntu_mda", command="/usr/bin/python3"),
+                      PythonOPTemplate(MetricReport, image="gturtu21/ubuntu_mda", image_pull_policy="IfNotPresent", command="/usr/bin/python3"),
                       artifacts={"molecule": sampling.outputs.artifacts["molecule"],
                                  "traj": sampling.outputs.artifacts["traj"],
                                  "image": sampling.outputs.artifacts["image"]},
@@ -121,7 +121,7 @@ def buildProjectWorkflow(molecules: List[str] = ["c1ccccc1", "c1ccccn1"], config
                parallelism=120)
     wf.add(all)
 
-    summary_step = Step("summary-report", PythonOPTemplate(Summary, image="python:3.8"),
+    summary_step = Step("summary-report", PythonOPTemplate(Summary, image="python:3.8", image_pull_policy="IfNotPresent"),
                         parameters={"molecules": molecules_dataset,
                                     "metrics": all.outputs.parameters["rmsd"],
                                     "config_logger": config_logger,

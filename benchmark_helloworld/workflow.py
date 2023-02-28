@@ -21,7 +21,7 @@ def Check(foo: Artifact(List[str])) -> {}:
 def buildWorkflow():
     wf = Workflow("benchmark-hello")
     hello = Step("hello",
-                 PythonOPTemplate(Hello, image="python:3.8",
+                 PythonOPTemplate(Hello, image="python:3.8", image_pull_policy="IfNotPresent",
                                   slices=Slices("{{item}}",
                                                 input_parameter=["filename"],
                                                 output_artifact=["foo"]
@@ -31,7 +31,7 @@ def buildWorkflow():
                  with_param=argo_range(2))
     wf.add(hello)
     check = Step("check",
-                 PythonOPTemplate(Check, image="python:3.8"),
+                 PythonOPTemplate(Check, image="python:3.8", image_pull_policy="IfNotPresent"),
                  artifacts={"foo": hello.outputs.artifacts["foo"]})
     wf.add(check)
     return wf
